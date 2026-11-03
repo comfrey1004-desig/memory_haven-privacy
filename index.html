@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Memory Haven privacy policy">
+  <title>Memory Haven Privacy Policy</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Open the policy in the visitor's language when there is one.
+    (function () {
+      var pages = { ko: 'privacy-policy-ko.html', en: 'privacy-policy-en.html' };
+      var langs = navigator.languages || [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).toLowerCase().split('-')[0];
+        if (pages[code]) {
+          location.replace(pages[code]);
+          return;
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+<div class="container">
+  <div class="brand">
+    <img src="icon.png" alt="">
+    <h1>Memory Haven · 기억건축소</h1>
+  </div>
+  <p class="subtitle">Privacy Policy · 개인정보처리방침</p>
+  <div class="choices">
+    <a href="privacy-policy-ko.html" hreflang="ko">한국어</a>
+    <a href="privacy-policy-en.html" hreflang="en">English</a>
+  </div>
+</div>
+</body>
+</html>
